@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC82D264208F627300DCF54A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EC82D263208F627300DCF54A /* main.c */; };
+		EC82D26F208F62A100DCF54A /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = EC82D26E208F62A100DCF54A /* hash.c */; };
+		EC82D272208F62CA00DCF54A /* tripulante.c in Sources */ = {isa = PBXBuildFile; fileRef = EC82D271208F62CA00DCF54A /* tripulante.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EC82D25E208F627300DCF54A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EC82D260208F627300DCF54A /* aeds2-ap2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "aeds2-ap2"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC82D263208F627300DCF54A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		EC82D26D208F62A100DCF54A /* hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
+		EC82D26E208F62A100DCF54A /* hash.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hash.c; sourceTree = "<group>"; };
+		EC82D270208F62CA00DCF54A /* tripulante.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tripulante.h; sourceTree = "<group>"; };
+		EC82D271208F62CA00DCF54A /* tripulante.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tripulante.c; sourceTree = "<group>"; };
+		EC82D273208F63D300DCF54A /* tripulantes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = tripulantes.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC82D25D208F627300DCF54A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC82D257208F627300DCF54A = {
+			isa = PBXGroup;
+			children = (
+				EC82D262208F627300DCF54A /* aeds2-ap2 */,
+				EC82D261208F627300DCF54A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC82D261208F627300DCF54A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC82D260208F627300DCF54A /* aeds2-ap2 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC82D262208F627300DCF54A /* aeds2-ap2 */ = {
+			isa = PBXGroup;
+			children = (
+				EC82D263208F627300DCF54A /* main.c */,
+				EC82D26D208F62A100DCF54A /* hash.h */,
+				EC82D26E208F62A100DCF54A /* hash.c */,
+				EC82D270208F62CA00DCF54A /* tripulante.h */,
+				EC82D271208F62CA00DCF54A /* tripulante.c */,
+				EC82D273208F63D300DCF54A /* tripulantes.txt */,
+			);
+			path = "aeds2-ap2";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC82D25F208F627300DCF54A /* aeds2-ap2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC82D267208F627300DCF54A /* Build configuration list for PBXNativeTarget "aeds2-ap2" */;
+			buildPhases = (
+				EC82D25C208F627300DCF54A /* Sources */,
+				EC82D25D208F627300DCF54A /* Frameworks */,
+				EC82D25E208F627300DCF54A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "aeds2-ap2";
+			productName = "aeds2-ap2";
+			productReference = EC82D260208F627300DCF54A /* aeds2-ap2 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC82D258208F627300DCF54A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "UFV Florestal";
+				TargetAttributes = {
+					EC82D25F208F627300DCF54A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EC82D25B208F627300DCF54A /* Build configuration list for PBXProject "aeds2-ap2" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EC82D257208F627300DCF54A;
+			productRefGroup = EC82D261208F627300DCF54A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC82D25F208F627300DCF54A /* aeds2-ap2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC82D25C208F627300DCF54A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC82D272208F62CA00DCF54A /* tripulante.c in Sources */,
+				EC82D264208F627300DCF54A /* main.c in Sources */,
+				EC82D26F208F62A100DCF54A /* hash.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EC82D265208F627300DCF54A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EC82D266208F627300DCF54A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EC82D268208F627300DCF54A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EC82D269208F627300DCF54A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC82D25B208F627300DCF54A /* Build configuration list for PBXProject "aeds2-ap2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC82D265208F627300DCF54A /* Debug */,
+				EC82D266208F627300DCF54A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC82D267208F627300DCF54A /* Build configuration list for PBXNativeTarget "aeds2-ap2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC82D268208F627300DCF54A /* Debug */,
+				EC82D269208F627300DCF54A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC82D258208F627300DCF54A /* Project object */;
+}
