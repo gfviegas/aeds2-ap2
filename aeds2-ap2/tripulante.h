@@ -9,16 +9,18 @@
 #ifndef tripulante_h
 #define tripulante_h
 
+#define N 20
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "hash.h"
 
 typedef struct Tripulante* TripulantePointer;
 typedef struct Tripulante {
     int codigo;
     char nome[N];
 } Tripulante;
+
+#include "hash.h"
 
 void criaTripulante(TripulantePointer tripulante, int codigo, char* nome);
 void imprimeTripulante(TripulantePointer tripulante);

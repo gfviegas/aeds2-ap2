@@ -6,6 +6,8 @@
 //  Copyright © 2018 UFV Florestal. All rights reserved.
 //
 
+#define N 20
+#define TOTAL 200
 #include <stdio.h>
 #include "hash.h"
 #include "tripulante.h"
@@ -16,7 +18,7 @@ void readFile(Tripulante* lista) {
     char nome[N];
     
     FILE *fp;
-    fp = fopen("/Users/Gustavo/Projects/aeds2/aeds2-ap2/aeds2-ap2/tripulantes.txt", "r");
+    fp = fopen("tripulantes.txt", "r");
     
     if (fp != NULL) {
         while (i < M) {
@@ -35,31 +37,59 @@ void readFile(Tripulante* lista) {
     }
 }
 
+void digitarTermo(TripulantePointer listaHash, int* lista){
+    char termo[N];
+
+    printf("Digite um nome para busca: ");
+    scanf("%s", termo);
+    Tripulante tripulante = buscaHash(termo, listaHash, lista);
+}
+
+int menu(){
+    int op = 0;
+    while (op != 1 && op != 2 && op != 3)
+    {
+        printf("-------- Tabelas Hash --------\n\n");
+        printf("1 - Imprimir todos os termos\n");
+        printf("2 - Buscar por um termo\n");
+        printf("3 - Sair\n\n");
+        printf("Digite sua opcao: ");
+        scanf("%d", &op);
+    }
+    return op;
+}
+
 int main(int argc, const char * argv[]) {
     int lista[N];
-    Tripulante listaTripulantes[200];
+    Tripulante listaTripulantes[TOTAL];
     Tripulante listaHash[M];
     int i;
     int hash;
-    
+
     setarRandomicidade();
-    
     gerarListaRandomica(lista);
     readFile(listaTripulantes);
-    
-    char palavra[20];
-    strcpy(palavra, "Marretinha");
-    // printaListaRandomica(lista);
-    printf("%d %d %d!\n", lista[0], lista[N - 1], lista[1]);
-    printf("Hash de Marretinha: %d\n", calcularHash(palavra, lista));
-    
+    inicializarListaHash(listaHash);
+
     for (i = 0; i < M; i++) {
-        hash = calcularHash(listaTripulantes[i].nome, lista);
-        inserirHash(listaHash, hash, listaTripulantes[i]);
+        inserirHash(listaHash, listaTripulantes[i], lista);
     }
 
-    hash = calcularHash("Janella", lista);
-    printf("");
-    
+    int op = menu();
+    while(op != 3){
+        switch (op) {
+            case 1:
+                exibeTabelaHash(listaHash);
+                break;
+            case 2:
+                digitarTermo(listaHash, lista);
+                break;
+            case 3:
+                exit;
+                break;
+        }
+        op = menu();
+    }
+
     return 0;
 }
