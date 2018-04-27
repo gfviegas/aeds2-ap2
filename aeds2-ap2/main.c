@@ -10,23 +10,39 @@
 #define TOTAL 200
 #include <stdio.h>
 #include "hash.h"
-#include "tripulante.h"
+#include "crew.h"
 
-void readFile(Tripulante* lista) {
-    int codigo;
+/**
+ Imprime um cabeçalho com instruções e descrição do programa
+ */
+void printHeader () {
+    printf("|| ||\n");
+    printf("|| ||\t HashFlight 1.0\n");
+    printf("|| ||\t Atividade Prática 2 de \"Algoritmos e Estruturas de Dados\" II \n");
+    printf("|| ||\t Abril de 2018 - UFV Campus Florestal\n");
+    printf("|| ||\t Bruno Marra (3029), Gustavo Viegas (3026) e Heitor Passeado (3055)\n");
+    printf("|| ||\n");
+    printf("\nO programa irá pedir pra que você digite um código após cada operação executada. Basta digitar o código requisitado pra a operação ser executada. \n\n");
+}
+
+/**
+ Lê o arquivo de entrada e insere na list de crews.
+ */
+void readFile(Crew* list) {
+    int code;
     int i = 0;
-    char nome[N];
+    char name[N];
     
     FILE *fp;
-    fp = fopen("tripulantes.txt", "r");
+    fp = fopen("/Users/Gustavo/Projects/aeds2/aeds2-ap2/aeds2-ap2/list.txt", "r");
     
     if (fp != NULL) {
         while (i < M) {
-            fscanf(fp, "%d %s", &codigo, nome);
+            fscanf(fp, "%d %s", &code, name);
             if (fgetc(fp) == EOF)
                 break;
             
-            criaTripulante(&(lista[i]), codigo, nome);
+            createCrew(&(list[i]), code, name);
             i++;
         }
 
@@ -37,19 +53,28 @@ void readFile(Tripulante* lista) {
     }
 }
 
-void digitarTermo(TripulantePointer listaHash, int* lista){
-    char termo[N];
+/**
+ Pesquisa por um tripulante na lista hash
+ */
+void searchCrew(CrewPointer hashList, int* list){
+    char query[N];
 
     printf("Digite um nome para busca: ");
-    scanf("%s", termo);
-    Tripulante tripulante = buscaHash(termo, listaHash, lista);
+    scanf("%s", query);
+    searchHash(query, hashList, list);
 }
 
-int menu(){
+
+/**
+ Imprime instruções de códigos a serem inseridos para o programa executar
+
+ @return codigo da operação escolhida pelo usuário
+ */
+int menu () {
     int op = 0;
     while (op != 1 && op != 2 && op != 3)
     {
-        printf("-------- Tabelas Hash --------\n\n");
+        printf("\n-------- Tabelas Hash - Comandos --------\n\n");
         printf("1 - Imprimir todos os termos\n");
         printf("2 - Buscar por um termo\n");
         printf("3 - Sair\n\n");
@@ -60,34 +85,34 @@ int menu(){
 }
 
 int main(int argc, const char * argv[]) {
-    int lista[N];
-    Tripulante listaTripulantes[TOTAL];
-    Tripulante listaHash[M];
+    int list[N];
+    Crew listCrews[TOTAL];
+    Crew hashList[M];
     int i;
-    int hash;
 
-    setarRandomicidade();
-    gerarListaRandomica(lista);
-    readFile(listaTripulantes);
-    inicializarListaHash(listaHash);
+    setRandomFactor();
+    generateRandomList(list);
+    printHeader();
+    readFile(listCrews);
+    initHashList(hashList);
 
     for (i = 0; i < M; i++) {
-        inserirHash(listaHash, listaTripulantes[i], lista);
+        insertHash(hashList, listCrews[i], list);
     }
 
     int op = menu();
-    while(op != 3){
+    while (op != 3) {
         switch (op) {
             case 1:
-                exibeTabelaHash(listaHash);
+                printHashList(hashList);
                 break;
             case 2:
-                digitarTermo(listaHash, lista);
+                searchCrew(hashList, list);
                 break;
             case 3:
-                exit;
-                break;
+                return 0;
         }
+
         op = menu();
     }
 

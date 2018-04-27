@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EC82D264208F627300DCF54A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EC82D263208F627300DCF54A /* main.c */; };
 		EC82D26F208F62A100DCF54A /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = EC82D26E208F62A100DCF54A /* hash.c */; };
-		EC82D272208F62CA00DCF54A /* tripulante.c in Sources */ = {isa = PBXBuildFile; fileRef = EC82D271208F62CA00DCF54A /* tripulante.c */; };
+		ECE0365F2092A1D900B7BCDA /* crew.c in Sources */ = {isa = PBXBuildFile; fileRef = ECE0365E2092A1D900B7BCDA /* crew.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,9 +29,9 @@
 		EC82D263208F627300DCF54A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EC82D26D208F62A100DCF54A /* hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
 		EC82D26E208F62A100DCF54A /* hash.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hash.c; sourceTree = "<group>"; };
-		EC82D270208F62CA00DCF54A /* tripulante.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tripulante.h; sourceTree = "<group>"; };
-		EC82D271208F62CA00DCF54A /* tripulante.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tripulante.c; sourceTree = "<group>"; };
-		EC82D273208F63D300DCF54A /* tripulantes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = tripulantes.txt; sourceTree = "<group>"; };
+		ECE0365920929F5200B7BCDA /* list.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = list.txt; sourceTree = "<group>"; };
+		ECE0365D2092A1D900B7BCDA /* crew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crew.h; sourceTree = "<group>"; };
+		ECE0365E2092A1D900B7BCDA /* crew.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = crew.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +64,12 @@
 		EC82D262208F627300DCF54A /* aeds2-ap2 */ = {
 			isa = PBXGroup;
 			children = (
+				ECE0365920929F5200B7BCDA /* list.txt */,
 				EC82D263208F627300DCF54A /* main.c */,
 				EC82D26D208F62A100DCF54A /* hash.h */,
 				EC82D26E208F62A100DCF54A /* hash.c */,
-				EC82D270208F62CA00DCF54A /* tripulante.h */,
-				EC82D271208F62CA00DCF54A /* tripulante.c */,
-				EC82D273208F63D300DCF54A /* tripulantes.txt */,
+				ECE0365D2092A1D900B7BCDA /* crew.h */,
+				ECE0365E2092A1D900B7BCDA /* crew.c */,
 			);
 			path = "aeds2-ap2";
 			sourceTree = "<group>";
@@ -131,8 +131,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC82D272208F62CA00DCF54A /* tripulante.c in Sources */,
 				EC82D264208F627300DCF54A /* main.c in Sources */,
+				ECE0365F2092A1D900B7BCDA /* crew.c in Sources */,
 				EC82D26F208F62A100DCF54A /* hash.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

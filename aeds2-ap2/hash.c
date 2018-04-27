@@ -8,81 +8,86 @@
 
 #include "hash.h"
 
-void setarRandomicidade() {
+// Define o fator randômico para o programa poder gerar números aleátorios
+void setRandomFactor() {
     srand(time(NULL));
 }
 
-void gerarListaRandomica(int* lista) {
+// Gera uma lista de tamanho N com inteiros aleatórios
+void generateRandomList(int* list) {
     int i;
     
     for (i = 0; i < N; i++) {
-        lista[i] = (rand() % (N + 1));
-    }
-}
-void printaListaRandomica(int* lista) {
-    int i;
-    
-    for (i = 0; i < N; i++) {
-        printf("\tLista posição %d => %d \n", i, lista[i]);
+        list[i] = (rand() % (N + 1));
     }
 }
 
-int resolverConflito(int hash) {
+// Imprime uma lista de números randômicos
+void printRandomList(int* list) {
+    int i;
+    
+    for (i = 0; i < N; i++) {
+        printf("\tLista posição %d => %d \n", i, list[i]);
+    }
+}
+
+// Resolve um conflito de hash, identificando o próximo hash disponível linearmente
+int solveConflict(int hash) {
     return (hash + 1) % M;
 }
 
-int calcularHash(Tripulante *listaHash, char *nome, int* lista) {
-    unsigned long int n = strlen(nome);
+// Calcula o hash de um tripulante
+int calculateHash(Crew *hashList, char *name, int* list) {
+    unsigned long int n = strlen(name);
     int i;
     int k = 0;
 
     for (i = 0; i < n; i++) {
-        k += ((int) nome[i]) * lista[i];
+        k += ((int) name[i]) * list[i];
     }
 
     int hash = k % M;
     i = 0;
 
-    while (listaHash[hash].codigo != -1 && i < M) {
-        hash = resolverConflito(hash);
+    while (hashList[hash].code != -1 && i < M) {
+        hash = solveConflict(hash);
         i++;
     }
-
-    // if(i >= M){
-    //     printf("Tabela cheia!\n");
-    //     return -1;
-    // }
 
     return hash;
 }
 
-void inicializarListaHash(TripulantePointer listaHash) {
+// Inicializa uma lista hash
+void initHashList(CrewPointer hashList) {
     int i;
     for (i = 0; i < M; i++) {
-        listaHash[i].codigo = -1;
+        hashList[i].code = -1;
     }
 }
 
-void inserirHash(TripulantePointer listaHash, Tripulante tripulante, int * lista) {
-    int hash = calcularHash(listaHash, tripulante.nome, lista);
+// Insere um tripulante a lista de hash
+void insertHash(CrewPointer hashList, Crew crew, int * list) {
+    int hash = calculateHash(hashList, crew.name, list);
 
     if(hash != -1)
-        listaHash[hash] = tripulante;
+        hashList[hash] = crew;
 }
 
-void exibeTabelaHash(TripulantePointer listaHash){
+// Imprime uma lista hash com seus tripulantes
+void printHashList(CrewPointer hashList){
     int i = 0;
     for (i = 0; i < M;i++)
-        imprimeTripulante(&listaHash[i]);
+        printCrew(&hashList[i]);
     printf("\n");
 }
 
-Tripulante buscaHash(char *nome, TripulantePointer listaHash, int *lista){
-    int hash = calcularHash(listaHash, nome, lista);
-    if(strcmp(listaHash[hash].nome, nome) != 0){
+// Pesquisa na lista hash a ocorrência de um nome
+Crew searchHash(char *name, CrewPointer hashList, int *list){
+    int hash = calculateHash(hashList, name, list);
+    if(strcmp(hashList[hash].name, name) != 0){
         printf("Registro nao encontrado\n");
-        return;
+        return *hashList;
     }
-    imprimeTripulante(&listaHash[hash]);
-    return listaHash[hash];
+    printCrew(&hashList[hash]);
+    return hashList[hash];
 }
