@@ -2,7 +2,7 @@
 //  hash.h
 //  aeds2-ap2
 //
-//  Created by Gustavo Viegas on 24/04/18.
+//  Created by Bruno Marra (3029), Gustavo Viegas (3026) e Heitor Passeado (3055) on 24/04/18.
 //  Copyright © 2018 UFV Florestal. All rights reserved.
 //
 

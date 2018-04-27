@@ -2,7 +2,7 @@
 //  main.c
 //  aeds2-ap2
 //
-//  Created by Gustavo Viegas on 24/04/18.
+//  Created by Bruno Marra (3029), Gustavo Viegas (3026) e Heitor Passeado (3055) on 24/04/18.
 //  Copyright © 2018 UFV Florestal. All rights reserved.
 //
 
@@ -34,7 +34,9 @@ void readFile(Crew* list) {
     char name[N];
     
     FILE *fp;
-    fp = fopen("/Users/Gustavo/Projects/aeds2/aeds2-ap2/aeds2-ap2/list.txt", "r");
+    // FIXME: Path pro mac
+    // fp = fopen("/Users/Gustavo/Projects/aeds2/aeds2-ap2/aeds2-ap2/list.txt", "r");
+    fp = fopen("list.txt", "r");
     
     if (fp != NULL) {
         while (i < M) {
